@@ -1,4 +1,4 @@
-# Picture colour statistcs
+# Picture colour statistics
 
 ## Install
 Clone this project
@@ -33,4 +33,4 @@ Before run tests install gems
 
 Run tests
 
-`rspec specs`
+`rspec spec`

@@ -6,9 +6,9 @@ describe Picture do
     @picture = Picture.new(20,10)
   end
 
-  describe '#stadistics' do
+  describe '#statistics' do
     it 'has correct statistics' do
-      expect(@picture.paint(1,5,5,10,3).paint(2,0,0,7,7).stadistics).to eql(
+      expect(@picture.paint(1,5,5,10,3).paint(2,0,0,7,7).statistics).to eql(
         [[0, 125], [1, 26], [2, 49]]
       )
     end
@@ -25,7 +25,7 @@ end
 
 describe Picture::FromCSV do
   describe '#new' do
-    it 'prints formatted stadistics' do
+    it 'prints formatted statistics' do
       fixture_file = File.expand_path("../fixtures/input.csv", __FILE__)
 
       expect { Picture::FromCSV.new(fixture_file) }.to output(

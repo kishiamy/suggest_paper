@@ -12,7 +12,7 @@ class Picture
       pictures = Picture.new(canvas_size.first, canvas_size.last)
 
       input.drop(1).each { |p| pictures.paint(*p.first.split.map(&:to_i)) }
-      pictures.print_stadistics
+      pictures.print_statistics
     end
   end
 
@@ -29,12 +29,12 @@ class Picture
     self
   end
 
-  def stadistics
+  def statistics
     @sheet.flatten.uniq.sort.map {|row| [row,@sheet.flatten.count(row)] }
   end
 
-  def print_stadistics
-    stadistics.each {|stadistic| puts "#{stadistic.first} #{stadistic.last}"}
+  def print_statistics
+    statistics.each {|statistic| puts "#{statistic.first} #{statistic.last}"}
   end
 
   def print_canvas
